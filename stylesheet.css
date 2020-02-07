@@ -1,0 +1,766 @@
+html {
+overflow: scroll;
+ overflow-x: hidden;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-color:		#505050;
+color:black;
+font-family:sans-sarif;
+}
+button {
+	margin-bottom: 5px;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+body {
+margin: 0;
+overflow: hidden;
+}
+#normalColumn1 {
+	margin-left:10px;
+}
+.dot_span{
+	margin-left:21px;
+}
+.doubledot_span{
+	margin-left:42px;
+}
+.track_text {
+	font-size:30px;
+	margin-left:3px;
+	margin-right:3px;
+	vertical-align:top;
+}
+#checks_remaining {
+	color:blue;
+	font-size: 18px;
+	font-weight: bold;
+	
+}
+#text_next {
+	color: lightblue;
+	font-size: 18px;
+	font-weight: bold;
+}
+#logically_accessible{
+	color:darkgreen;
+	font-size: 18px;
+	font-weight: bold;
+	
+}
+#text_gan {
+	vertical-align:top;
+	color: #990000;
+	font-size:30px;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+}
+.forest_medallion{
+	vertical-align:top;
+	color: green;
+	font-size:30px;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	opacity: .2;
+}
+.fire_medallion{
+	vertical-align:top;
+	color: red;
+	font-size:30px;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	opacity: .2;
+}
+.water_medallion{
+	vertical-align:top;
+	color: blue;
+	font-size:30px;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	opacity: .2;
+}
+.shadow_medallion{
+	vertical-align:top;
+	font-size:30px;
+	color: rgb(238, 130, 238);
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	opacity: .2;
+}
+.spirit_medallion{
+	vertical-align:top;
+	font-size:30px;
+	color: rgb(255, 165, 0);
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	opacity: .2;
+}
+.generic_medallion{
+	vertical-align:top;
+	font-size:30px;
+	color: black;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	opacity: .2;
+}
+.greenstone{
+	vertical-align:top;
+	font-size:24px;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	color: green;
+	font-style:italic;
+	font-weight:100;
+	opacity:.2;
+	
+}
+.redstone{
+	vertical-align:top;
+	font-size:24px;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	color: red;
+	font-style:italic;
+	font-weight:100;
+	opacity:.2;
+}
+.bluestone{
+	vertical-align:top;
+	font-size:24px;
+	text-transform:uppercase;
+	font-family: "Consolas", Courier, monospace;
+	color: blue;
+	font-style:italic;
+	font-weight:100;
+	opacity:.2;
+}
+.requirements {
+	height:30px;
+	width: 30px;
+	margin-left:4px;
+	margin-right:0px;
+	margin-top:2px;
+	opacity: 0.2;
+}
+.hint_input {
+	width: 46px;
+	vertical-align: top;
+	margin-bottom: 0px;
+}
+
+#skip_req{
+	color: darkgreen;
+}
+.hint_text {
+	font-size: 20px;
+	font-weight: bold;
+}
+.meh_text {
+	font-size: 14px;
+	color: green;
+}
+.meh_input {
+	width: 25px;
+	vertical-align: top;
+	margin-bottom: 3px;
+}
+#woth_text {
+	color: #33cccc
+}
+#barren_text {
+	color: #ff8080
+}
+.super_hint_input {
+	width: 200px;
+	height:140px;
+	vertical-align: top;
+	margin-bottom: 3px;
+	columns: 5
+}
+.area_titles {
+	display: inline-block;
+	margin-bottom:6px;
+	font-size: 22px;
+	text-align: left;
+	font-weight: 3000;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.column {
+	margin-top:10px;
+  float: left;
+  width: 90px;
+}
+#checkSummaryColumn {
+	margin-top:350px;
+	right:0px;
+	position:absolute;
+	width: 340px;
+}
+#checkSummaryColumn2 {
+	margin-top:10px;
+	float: left;
+	width: 13.5%;
+}
+#info_column {
+	margin-top:10px;
+	float: left;
+	width: 245px;
+}
+#log_area {
+	position: absolute;
+	top:550px;
+	height: 190px;
+	background-color: #aaaaaa;
+	right:350px;
+	width: 425px;
+	float: bottom;
+	
+}
+#log_area2 {
+	position: absolute;
+	top:12px;
+	height: 325px;
+	background-color: #aaaaaa;
+	right: 50px;
+	width: 450px;
+	float: bottom;
+	
+}
+#songcolumn {
+	margin-top:10px;
+	float: left;
+	width: 140px;
+}
+.dungcolumn {
+	margin-top:10px;
+  float: left;
+  width: 115px;
+}
+.minidungcolumn {
+	margin-top:10px;
+  float: left;
+  width: 108px;
+}
+.no_span {
+	
+}
+.full_span{
+	display:inline-block;
+	width:40px;
+}
+.half_span{
+	display:inline-block;
+	width:20px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.check_input {
+	height:22px;
+	width: 30px;
+	vertical-align: top;
+	margin-bottom: 3px;
+	display: none;
+}
+.force_input {
+	height:22px;
+	width: 30px;
+	vertical-align: top;
+	margin-bottom: 3px;
+}
+.seed_input {
+	height:22px;
+	width: 40px;
+	vertical-align: top;
+	margin-bottom: 3px;
+}
+.layout_input {
+	width: 55px;
+	vertical-align: top;
+	margin-bottom: 0px;
+	margin-top:3px;
+}
+.check_text {
+	font-size: 16px;
+}
+.logic_check_text{
+	font-size: 16px;
+	color: 						chartreuse;
+	font-weight:bold;
+	display: inline-block;
+	margin-top:2px;
+	margin-bottom:5px;
+	vertical-align: top;
+}
+.logic_hint_text{
+	font-size: 16px;
+	color: 						pink;
+	font-weight:bold;
+	display: inline-block;
+	margin-top:2px;
+	margin-bottom:5px;
+	vertical-align: top;
+}
+.logic_skull_text {
+	font-size: 16px;
+	color: 						gold;
+	font-weight:bold;
+	display: inline-block;
+	margin-top:2px;
+	margin-bottom:5px;
+	vertical-align: top;
+}
+.logic_check_text2{
+	vertical-align: top;
+	font-size: 16px;
+	font-weight: normal;
+	color: 	chartreuse;
+	display: inline-block;
+	margin-bottom:2px;
+}
+.access_check_text{
+	vertical-align: top;
+	font-size: 16px;
+	color: 						yellow;
+	font-weight:normal;
+	margin-top:2px;
+	margin-bottom:5px;
+	display: inline-block;
+	opacity: .5;
+}
+.ool_check_text{
+	vertical-align: top;
+	font-size: 16px;
+	font-weight: normal;
+	color: 	black;
+	display: inline-block;
+	margin-top:2px;
+	margin-bottom:5px;
+	opacity: .5;
+}
+.ool_check_text2{
+	vertical-align: top;
+	font-size: 16px;
+	font-weight: normal;
+	color: 	black;
+	display: inline-block;
+	margin-bottom:2px;
+}
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.dot {
+  height: 18px;
+  width: 18px;
+  margin-right:3px;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+}
+.logicdot {
+	height: 12px;
+	width: 12px;
+	margin-left:3px;
+	margin-right:3px;
+	background-color: palevioletred;
+	vertical-align: center;
+	border-radius: 50%;
+	display: inline-block;
+}
+.superdot {
+  height: 20px;
+  width: 20px;
+  margin-left:3px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  vertical-align: center;
+  text-align: center;
+  font-size:18px;
+  color:orange;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+}
+.superdotSK {
+  height: 20px;
+  width: 20px;
+  margin-left:3px;
+  vertical-align: center;
+  text-align: center;
+  font-size:18px;
+  color:black;
+  background-color: gray;
+  border-radius: 50%;
+  display: inline-block;
+}
+.superdotBK {
+  height: 20px;
+  width: 20px;
+  margin-left:3px;
+  vertical-align: center;
+  text-align: center;
+  font-size:18px;
+  color:white;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+.bossdot {
+  height: 18px;
+  width: 18px;
+  background-color: red;
+  margin-right:3px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.check_icon{
+	margin-top:3px;
+	margin-right:3px;
+	height:16px;
+	width: 16px;
+}
+.songpics {
+	height:26px;
+	width: 26px;
+	margin-left:8px;
+	margin-right:0px;
+	margin-top:5px;
+	margin-bottom:5px;
+	opacity: .2;
+}
+.bonuspics{
+	height:26px;
+	width: 26px;
+	margin-right:4px;
+	margin-top:2px;
+	margin-bottom:3px;
+	opacity: .2;
+}
+.pplpics {
+	height:12px;
+	width: 12px;
+	margin-right:4px;
+	margin-top:9px;
+}
+.keydot {
+  height: 18px;
+  width: 18px;
+  background-color: gray;
+  margin-right:3px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.greendot {
+  height: 24px;
+  width: 24px;
+  margin-right:3px;
+  margin-bottom:3px;
+  background-color: green;
+  border-radius: 50%;
+  opacity: 0.2;
+  display: inline-block;
+}
+.reddot {
+  height: 26px;
+  width: 26px;
+  margin-right:3px;
+  background-color: red;
+  border-radius: 50%;
+  opacity: 0.2;
+  display: inline-block;
+}
+.bluedot {
+  height: 18px;
+  width: 18px;
+  margin-right:3px;
+  background-color: blue;
+  border-radius: 50%;
+  opacity: 0.2;
+  display: inline-block;
+}
+.purpledot {
+  height: 18px;
+  width: 18px;
+  margin-right:3px;
+  background-color: purple;
+  border-radius: 50%;
+  opacity: 0.2;
+  display: inline-block;
+}
+.orangedot {
+  height: 18px;
+  width: 18px;
+  margin-right:3px;
+  background-color: orange;
+  border-radius: 50%;
+  opacity: 0.2;
+  display: inline-block;
+}
+.yellowdot {
+  height: 18px;
+  width: 18px;
+  margin-right:3px;
+  background-color: yellow;
+  border-radius: 50%;
+  opacity: 0.2;
+  display: inline-block;
+}
+.gameFocus{
+position:absolute;
+left:50%;
+margin-top:40px;
+margin-left:-33%;
+text-align:center;
+height:85%;
+width:67%;
+border:3px solid black;
+border-radius:7.5%;
+}
+.locationTitle{
+font-weight:bold;
+font-size:22px;
+}
+.locationDescription{
+
+    font-size:17px;
+}
+.localListing{
+    width:100%;
+    height:5%;
+}
+.log {
+    margin-top:5%;
+    height:80%;
+    width:10%;
+    margin-left:2.5%;
+    text-align:left;
+}
+.logHeading{
+    font-size:16px;
+    font-weight:bold;
+    text-align:center;
+}
+.localText{
+}
+.localHeading{
+    font-size:16px;
+    font-weight:bold;
+}
+.localSection{
+vertical-align:top;
+width:25%;
+height:60%;
+display:inline-block;
+margin:1.5%;
+margin-top:0%;
+}
+#checkPedestal{
+	margin-top:3px;
+}
+#markStones {
+	margin-left:10px;
+}
+#forceOutOfLogic{
+	color:pink;
+	font-size:18px;
+}
+#forceIntoLogic{
+	color:lightgreen;
+	font-size:18px;
+}
+.travelMenu{
+position:absolute;
+
+height:55%;
+width:12%;
+text-align:center;
+border:2px solid black;
+top:42%;
+right:2%;
+}
+h1 {
+text-align:center;
+width:30%;
+margin:0 auto;
+padding-bottom:8px;
+}
+button{
+outline:none;
+}
+.top {
+display:inline;
+}
+.web{position:absolute; height:20px; width:20px; background-color:black; color:black; border-radius:50%; }
+
+#cweb{height:35px; width:35px; top:50%; left:50%;}
+#a1web{top:59%; left:52%;}
+#a2web{top:60%; left:56%;}
+#a3web{top:62%; left:60%;}
+#a4web{top:65%; left:64%;}
+#a5web{top:62%; left:68%;}
+#a6web{top:58%; left:72%;}
+#a7web{top:61%; left:75%; height:55px; width:55px;}
+#b1web{top:44%; left:52%;}
+#b2web{top:42%; left:49%;}
+#b3web{top:36%; left:50%;}
+#b4web{top:32%; left:47%;}
+
+@-webkit-keyframes orbit { 
+from { -webkit-transform:rotate(0deg) } 
+to { -webkit-transform:rotate(360deg) } }
+
+#title_kokiri {
+color:#20EA01;
+}
+#title_ranch {
+color:#101001;
+}
+
+#title_field {
+color:#B6B004;
+}
+
+#title_valley {
+color:#01E6D7;
+}
+
+#title_hylia {
+color:#0101E6;
+}
+
+#title_market {
+color:#C704E5;
+}
+
+#title_hcastle {
+color:#84FE0B;
+}
+
+#title_outG {
+color:#FE0404;
+}
+
+#title_ToT {
+color:#D4E3EF;
+}
+
+#title_river {
+color:#5DB8FE;
+}
+#title_domain {
+color:#A3D7FE;
+}
+#title_lostwoods {
+color:#004F0B;
+}
+#title_ganons {
+color:#990000	
+}
+#title_sfm {
+color:#8BFB9A;
+}
+#title_gcity {
+color:#FEB813;
+}
+#title_trail {
+color:#573E02;
+}
+#title_kakariko {
+color:#678C8A;
+}
+#title_crater {
+color:#FE3E04;
+}
+#title_fortress {
+color:#C3AB7C;
+}
+#title_wasteland {
+color:#976500;
+}
+#title_colossus {
+color:#FED788;
+}
+#title_graveyard {
+color:#200A28;
+}
+#title_deku {
+color:#563C25;
+}
+#title_dodongos {
+color:#B35705;
+}
+#title_jabu {
+color:#077D8A;
+}
+#title_fountain {
+color:#77F1FE;
+}
+#title_ice {
+color:#9EF3FD;
+}
+#title_forest {
+color:#88FA4E;
+}
+#title_fire {
+color:#FE3213;
+}
+#title_water {
+color:#131BFE;
+}
+#title_spirit {
+color:#8C9B03;
+}
+#title_shadow {
+color:#69008E;
+}
+#title_botw {
+color:#DE86FE;
+}
+#title_gtg {
+color:#FE8B08;
+}
+
